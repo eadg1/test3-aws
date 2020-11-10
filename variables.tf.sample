@@ -1,0 +1,17 @@
+# variables.tf
+variable "access_key" {
+     default = "YOU_ACESS_KEY"
+}
+variable "secret_key" {
+     default = "YOUR_SECRET_KEY"
+}
+variable "region" {
+     default = "us-east-1"
+}
+variable "availabilityZone" {
+     default = "us-east-1a"
+}
+
+variable "key_name" {
+    default="YOUR_KEY_NAME"
+}
