@@ -47,28 +47,6 @@ resource "aws_security_group" "allow_http" {
 }
 
 
-resource "aws_network_acl" "My_VPC_web_ACL" {
-  vpc_id = aws_vpc.vpc_example_network.id
-  subnet_ids = [aws_subnet.web.id]
-  ingress {
-    protocol   = "tcp"
-    rule_no    = 100
-    action     = "allow"
-    cidr_block = "0.0.0.0/0"
-    from_port  = 0
-    to_port    = 65535
-  }
-  egress {
-    protocol   = "tcp"
-    rule_no    = 100
-    action     = "allow"
-    cidr_block = "0.0.0.0/0"
-    from_port  = 0
-    to_port    = 65535
-  }
-
-}
-
 resource "aws_internet_gateway" "My_web_GW" {
  vpc_id = aws_vpc.vpc_example_network.id
  tags = {
