@@ -80,7 +80,7 @@ resource "aws_instance" "web1" {
   key_name= var.key_name
   associate_public_ip_address=true
   subnet_id=aws_subnet.web.id
-    vpc_security_group_ids = [
+  vpc_security_group_ids = [
          aws_security_group.allow_http.id,
   ]
   tags = {
@@ -94,7 +94,7 @@ resource "aws_instance" "web2" {
   key_name= var.key_name
   associate_public_ip_address=true
   subnet_id=aws_subnet.web.id
-    vpc_security_group_ids = [
+  vpc_security_group_ids = [
          aws_security_group.allow_http.id,
   ]
   tags = {
